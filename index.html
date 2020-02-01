@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+	<head>	
+		<title>BMI Calulator</title>
+		<link rel="stylesheet" href="css/tachyons.min.css"/>
+	</head>
+
+	<body class="flex flex-column min-vh-100 sans-serif">
+
+		<header class="pa4 pt2 bg-blue washed-yellow tc">
+			<div class="pa1 bg-dark-blue">
+				<h1 class="f2-ns f3">bmicalculatorguru.com</h1>
+				<h2 class="f3-ns f4">BMI Calculator</h2>
+			</div>
+		</header>
+
+		<main class="pa4 flex-auto flex flex-wrap justify-around">
+			<form id="bmi_form_std" class="shadow-5 ma1-ns ma3 pa3">
+				<div class="mt3">
+					<h2 class="normal underline">Metric BMI</h2>
+				</div>
+				<div class="mt3">
+					<legend for="weightMetric" class="f6 fw6">Weight</legend>
+					<input class="pa2 input-reset ba bg-transparent db mt1" type="number" name="weightMetric"  id="weightMetric" placeholder="In Kilogram" min="0" step="any" required>
+				</div>
+				<div class="mt3">
+					<legend for="heightMetric" class="f6 fw6">Height</legend>
+					<input class="pa2 input-reset ba bg-transparent db mt1" type="number" name="heightMetric"  id="heightMetric" placeholder="In Metre" min="0" step="any" required>
+				</div>		
+				<div class="mt3">
+				  <input class="submit b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" id="submitMetric" type="submit" value="Submit">
+				  <input class="reset b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" id="resetMetric" type="reset" value="Reset">
+				</div>
+				<div class="mt3">
+					<p class="near-black" id ="resultMetric">Your BMI score is : ?</p>
+				</div>
+			</form>
+			<form id="bmi_form_metric" class="shadow-5 ma1-ns m3 pa3">
+				<div class="mt3">
+					<h2 class="normal underline">Standard BMI</h2>
+				</div>
+				<div class="mt3">
+					<legend for="weightStd" class="f6 fw6">Weight</legend>
+					<input class="pa2 input-reset ba bg-transparent db mt1" type="number" name="weightStd"  id="weightStd" placeholder="In Pounds" min="0" step="any" required>
+				</div>
+				<div class="mt3">
+					<legend for="heightStd" class="f6 fw6">Height</legend>
+					<input class="pa2 input-reset ba bg-transparent db mt1" type="number" name="heightStd"  id="heightStd" placeholder="In Feet" min="0" step="any" required>
+				</div>		
+				<div class="mt3">
+				  <input class="submit b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" id="submitStd" type="submit" value="Submit">
+				  <input class="reset b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" id="ResetStd" type="reset" value="Reset">
+				</div>
+				<div class="mt3">
+					<p class="near-black" id ="resultStd">Your BMI score is : ?</p>
+				</div>
+			</form>
+			<div id="bmi_calc_description" class="shadow-5 ma1-l ma3 pa3">
+				<div class="mt3">
+					<h2 class="normal underline">Body Mass Index Interpretation</h2>
+				</div>
+				<div class="mt3">
+					<p class="near-black"> <span class="b">BMI < 18.5:</span> Below Normal Weight</p>
+					<p class="near-black"> <span class="b">BMI >= 18.5 and < 25:</span> Normal Weight</p>
+					<p class="near-black"> <span class="b">BMI >= 25 and < 30:</span> Overweight</p>
+					<p class="near-black"> <span class="b">BMI >= 30 and < 35:</span> Class I Obesity</p>
+					<p class="near-black"> <span class="b">BMI >= 35 and < 40:</span> Class II Obesity</p>
+					<p class="near-black"> <span class="b">BMI >= 40:</span> Class III Obesity</p>
+				</div>
+			</div>
+		</main>
+
+		<footer class="pv3 bg-blue washed-yellow">
+			<p class="tc">Made by <a class="link washed-yellow underline-hover" href="https://github.com/sansharma056">Sankalp Sharma</a>.</p>
+		</footer>
+		
+		<script type="text/javascript" src="js/index.js"></script>
+
+	</body>
+
+</html>
